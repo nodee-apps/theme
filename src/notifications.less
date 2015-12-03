@@ -1,0 +1,37 @@
+// main: theme.less
+
+/*
+* Notifications
+*/
+
+.notification-container {
+    position:fixed;
+    right:10px;
+    z-index:99999;
+}
+
+.notification-container .alert {
+    width:300px;
+    margin:10px;
+    position:relative;
+}
+
+/*
+* Alert
+*/
+
+.alert.alert-default {
+    background-color: @alert-default-bg;
+    color: @alert-default-text;
+    border: 1px solid @alert-default-border;
+}
+
+.alert a {
+    color: inherit;
+}
+
+.alert > .alert-pin {
+    position:absolute;
+    top:2px;
+    left:2px;
+}

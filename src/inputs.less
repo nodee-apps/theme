@@ -1,0 +1,131 @@
+// main: theme.less
+
+/*
+ * Inputs
+ */
+ 
+input:focus,
+a:focus {
+    outline-color: @input-outline-focus;
+}
+    
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="phone"],
+input[type="url"],
+select {
+    border: 1px solid @input-border;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: @gray;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width:142px;
+}
+
+input[type="text"].input-xs,
+input[type="email"].input-xs,
+input[type="password"].input-xs,
+input[type="number"].input-xs,
+input[type="tel"].input-xs,
+input[type="phone"].input-xs,
+input[type="url"].input-xs,
+select.input-xs,
+.form-control.input-xs,
+.form-control.form-control-xs {
+    font-size: 11px;
+    height: 22px;
+    line-height: 1.5em;
+    padding: 1px 5px;
+}
+
+input[type="text"].input-sm,
+input[type="email"].input-sm,
+input[type="password"].input-sm,
+input[type="number"].input-sm,
+input[type="tel"].input-sm,
+input[type="phone"].input-sm,
+input[type="url"].input-sm,
+select.input-sm,
+.form-control.input-sm,
+.form-control.form-control-sm {
+    font-size: 12px;
+    height: 30px;
+    line-height: 1.5em;
+    padding: 5px 10px;
+}
+
+input[type="text"].input-lg,
+input[type="email"].input-lg,
+input[type="password"].input-lg,
+input[type="number"].input-lg,
+input[type="tel"].input-lg,
+input[type="phone"].input-lg,
+input[type="url"].input-lg,
+select.input-lg,
+.form-control.input-lg,
+.form-control.form-control-lg {
+    height: 46px;
+    line-height: 1.33em;
+    padding: 10px 16px;
+}
+
+input.form-control { width:100%; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="phone"],
+input[type="url"],
+select,
+textarea {
+    -webkit-border-radius: @input-border-radius;   
+    -moz-border-radius: @input-border-radius;   
+    border-radius: @input-border-radius;
+}
+
+textarea.form-control.input-xs,
+textarea.form-control.input-sm,
+textarea.form-control.input-lg,
+textarea.form-control.form-control-xs,
+textarea.form-control.form-control-sm,
+textarea.form-control.form-control-lg {
+    height:inherit;
+}
+
+select {
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
+}
+
+/*
+ * Icons inside input
+ */
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 30px;
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}

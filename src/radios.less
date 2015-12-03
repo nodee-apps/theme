@@ -1,0 +1,117 @@
+// main: theme.less
+
+/*
+* Radiobutton
+*/
+
+.radio {
+    font-weight: normal;
+    margin-top:0px;
+    margin-bottom:0px;
+    display: inline-block;
+}
+
+.radio label,
+label.radio {
+    cursor:pointer;
+}
+
+.radio.form-control {
+    border-color:transparent;
+    background-color:transparent;
+    box-shadow: none;
+    padding-left:0px;
+}
+
+.radio label {
+    padding-left:0px;
+}
+
+.radio input[type="checkbox"],
+.radio input[type="radio"],
+.radio .checked {
+    display: none;
+}
+
+.radio input[type="radio"]:checked ~ .checked,
+.radio input[type="checkbox"]:checked ~ .checked {
+    display: inline-block;
+}
+
+.radio input[type="radio"]:checked ~ .unchecked,
+.radio input[type="checkbox"]:checked ~ .unchecked {
+    display: none;
+}
+
+.radio .radio-icon {
+    margin-right:1.5em; 
+}
+
+.radio .radio-icon::before {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    line-height: 1.2em;
+    background-color: @input-bg;
+    border: 1px solid @input-border;
+    border-radius: @border-radius-small;
+    font-family: "FontAwesome";
+    content: "\00a0";
+    font-style: normal;
+    text-align: center;
+}
+
+input[type="checkbox"]:checked + .radio-icon::before,
+input[type="radio"]:checked + .radio-icon::before {
+    content: @input-radio-icon;
+}
+
+.radio input[type="checkbox"]:disabled + .radio-icon,
+.radio input[type="radio"]:disabled + .radio-icon {
+    opacity: 0.65;
+}
+.radio input[type="checkbox"]:disabled + .radio-icon::before,
+.radio input[type="radio"]:disabled + .radio-icon::before {
+    background-color: @gray-lighter;
+    cursor: not-allowed;
+}
+.radio.radio-circle .radio-icon::before {
+    border-radius: 50%;
+}
+
+.radio-primary input[type="checkbox"]:checked + .radio-icon::before,
+.radio-primary input[type="radio"]:checked + .radio-icon::before {
+    background-color: @brand-primary;
+    border-color: @brand-primary;
+    color: @input-bg;
+}
+
+.radio-danger input[type="checkbox"]:checked + .radio-icon::before,
+.radio-danger input[type="radio"]:checked + .radio-icon::before {
+    background-color: @brand-danger;
+    border-color: @brand-danger;
+    color: @input-bg;
+}
+
+.radio-info input[type="checkbox"]:checked + .radio-icon::before,
+.radio-info input[type="radio"]:checked + .radio-icon::before {
+    background-color: @brand-info;
+    border-color: @brand-info;
+    color: @input-bg;
+}
+
+.radio-warning input[type="checkbox"]:checked + .radio-icon::before,
+.radio-warning input[type="radio"]:checked + .radio-icon::before {
+    background-color: @brand-warning;
+    border-color: @brand-warning;
+    color: @input-bg;
+}
+
+.radio-success input[type="checkbox"]:checked + .radio-icon::before,
+.radio-success input[type="radio"]:checked + .radio-icon::before {
+    background-color: @brand-success;
+    border-color: @brand-success;
+    color: @input-bg;
+}

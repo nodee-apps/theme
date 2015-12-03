@@ -1,0 +1,129 @@
+// main: theme.less
+
+/*
+* Tree view
+*/
+
+.tree ul {
+    padding-left:10px;
+}
+
+.tree > ul {
+    padding-left:10px;
+}
+
+.tree li {
+    margin: 0px 0;
+    list-style-type: none;
+    position: relative;
+    padding: 10px 5px 0px 5px;
+}
+.tree li::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    right: auto;
+    left: -5px;
+    border-left: 1px solid #ccc;
+    bottom: 50px;
+}
+.tree li::after {
+    content:'';
+    position: absolute;
+    top: 20px;
+    width: 10px;
+    height: 20px;
+    right: auto;
+    left: -5px;
+    border-top: 1px solid #ccc;
+}
+.tree li a {
+    padding: 5px 10px;
+    font-size: 11px;
+    border-radius: @border-radius-small;
+    -webkit-border-radius: @border-radius-small;
+    -moz-border-radius: @border-radius-small;
+}
+
+.tree .tree-item {
+    position:relative;
+}
+
+.tree .tree-item .tree-item-menu {
+    display:none;
+}
+
+.tree .tree-item .tree-item-menu.visible {
+    display:inline-block;
+}
+
+.tree .tree-item:hover .tree-item-menu {
+    display:inline-block;
+}
+
+.tree .tree-item.dragged .tree-item-menu,
+.tree .tree-item.dragged .tree-item-menu.visible {
+    display:none;
+}
+
+.tree .tree-item .tree-item-expander {
+    left:-23px;
+    width:20px;
+    height:100%;
+    position:absolute;
+    z-index: 1;
+    line-height: 26px;
+    text-align: right;
+}
+.tree .tree-item .tree-item-expander > * {
+    cursor: pointer;
+    /*background-color:#ffffff;*/
+    color:#999999;
+}
+
+.tree .tree-item.dragged .tree-item-expander {
+    display:none;
+}
+
+/*
+.tree .tree-item:not(.dragged) a.dragover {
+background-color: #333 !important;
+color:#fff;
+}
+*/
+
+.tree-item-sort-arrow {
+    display:none;
+    position:absolute;
+    top:-12px;
+    left:30px;
+    color: #333 !important;
+    font-size:18px;
+}
+
+.tree .tree-item:not(.dragged) .tree-item-expander.dragover .tree-item-sort-arrow,
+.tree .tree-item:not(.dragged) a.dragover .tree-item-sort-arrow {
+    display:block;
+}
+
+/*Remove connectors before root*/
+.tree > ul > li::before, .tree > ul > li::after {
+    border: 0;
+}
+/*Remove connectors after last child*/
+.tree li:last-child::before {
+    height: 20px;
+}
+
+/*We will apply the hover effect the the lineage of the element also
+.tree li a:hover, .tree li a:hover+ul li a {
+background: #c8e4f8;
+color: #000;
+border: 1px solid #94a0b4;
+}*/
+/*Connector styles on hover
+.tree li a:hover+ul li::after, .tree li a:hover+ul li::before, .tree li a:hover+ul::before, .tree li a:hover+ul ul::before {
+border: 2px solid #000;
+}*/

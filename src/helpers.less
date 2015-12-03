@@ -1,0 +1,116 @@
+// main: theme.less
+
+.text-base, .text-normal {
+    font-size: @font-size-base !important;
+}
+
+.text-large, .text-lg {
+    font-size: @font-size-large !important;
+}
+
+.text-small, .text-sm {
+    font-size: @font-size-small !important;
+}
+
+.text-extrasmall, .text-xs {
+    font-size: @font-size-extrasmall !important;
+}
+
+.left { text-align:left; }
+.center, .center-h { text-align:center; }
+.center-v {
+    display: table-cell;
+    vertical-align: middle;
+    height:100%;
+    float: none;
+}
+.right { text-align:right; }
+
+.width-xs { width:36px !important; }
+.width-sm { width:71px !important; }
+.width-md { width:142px !important; }
+.width-lg { width:284px !important; }
+
+.nowrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: inline-block;
+    overflow: hidden
+}
+
+td.nowrap {
+    display:table-cell;
+    max-width: 100px;
+    width: auto;
+}
+
+.background-info { background-color: @state-info-bg !important; }
+.background-success { background-color: @state-success-bg !important; }
+.background-warning { background-color: @state-warning-bg !important; }
+.background-danger { background-color: @state-danger-bg !important; }
+
+.position-relative {
+    position:relative;
+}
+.position-absolute {
+    position:absolute;
+}
+.position-absolute-overlay,
+.absolute-overlay {
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.position-absolute-overlay-horizontal,
+.absolute-overlay-horizontal {
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:0;
+}
+
+.position-absolute-overlay-vertical,
+.absolute-overlay-vertical {
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+}
+
+.hidden {
+    display:none;
+}
+
+.visible, .visible-block, display-block {
+    display:block;
+}
+
+.visible-inline-block, display-inline-block {
+    display:inline-block;
+}
+
+.visible-inline, display-inline {
+    display:inline;
+}
+
+/*
+ * img-reponsive align center
+ */
+
+.img-responsive {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*
+* Angular css
+*/
+.ng-hide {
+    display:none !important;
+}

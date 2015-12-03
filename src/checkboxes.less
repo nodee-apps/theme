@@ -1,0 +1,125 @@
+// main: theme.less
+
+/*
+* Checkbox
+*/
+
+.checkbox {
+    font-weight: normal;
+    margin-top:0px;
+    margin-bottom:0px;
+    display: inline-block;
+}
+
+.checkbox label, 
+label.checkbox {
+    cursor:pointer;
+}
+
+.checkbox.form-control {
+    border-color:transparent;
+    background-color:transparent;
+    box-shadow: none;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.checkbox.form-control.input-xs,
+.checkbox.form-control.input-sm,
+.checkbox.form-control.input-lg {
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.checkbox label {
+    padding-left:0px;
+}
+
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"],
+.checkbox .checked {
+    display: none;
+}
+
+.checkbox input[type="checkbox"]:checked ~ .checked,
+.checkbox input[type="radio"]:checked ~ .checked {
+    display: inline-block;
+}
+
+.checkbox input[type="checkbox"]:checked ~ .unchecked,
+.checkbox input[type="radio"]:checked ~ .unchecked {
+    display: none;
+}
+
+.checkbox .checkbox-icon {
+    margin-right:1.5em; 
+}
+
+.checkbox .checkbox-icon::before {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    line-height: 1.2em;
+    background-color: @input-bg;
+    border: 1px solid @input-border;
+    border-radius: @border-radius-small;
+    font-family: "FontAwesome";
+    content: "\00a0";
+    font-style: normal;
+    text-align: center;
+}
+
+input[type="checkbox"]:checked + .checkbox-icon::before,
+input[type="radio"]:checked + .checkbox-icon::before {
+    content: @input-checkbox-icon;
+}
+
+.checkbox input[type="checkbox"]:disabled + .checkbox-icon,
+.checkbox input[type="radio"]:disabled + .checkbox-icon {
+    opacity: 0.65;
+}
+.checkbox input[type="checkbox"]:disabled + .checkbox-icon::before,
+.checkbox input[type="radio"]:disabled + .checkbox-icon::before {
+    background-color: @gray-lighter;
+    cursor: not-allowed;
+}
+.checkbox.checkbox-circle .checkbox-icon::before {
+    border-radius: 50%;
+}
+
+.checkbox-primary input[type="checkbox"]:checked + .checkbox-icon::before,
+.checkbox-primary input[type="radio"]:checked + .checkbox-icon::before {
+    background-color: @brand-primary;
+    border-color: @brand-primary;
+    color: @input-bg;
+}
+
+.checkbox-danger input[type="checkbox"]:checked + .checkbox-icon::before,
+.checkbox-danger input[type="radio"]:checked + .checkbox-icon::before {
+    background-color: @brand-danger;
+    border-color: @brand-danger;
+    color: @input-bg;
+}
+
+.checkbox-info input[type="checkbox"]:checked + .checkbox-icon::before,
+.checkbox-info input[type="radio"]:checked + .checkbox-icon::before {
+    background-color: @brand-info;
+    border-color: @brand-info;
+    color: @input-bg;
+}
+
+.checkbox-warning input[type="checkbox"]:checked + .checkbox-icon::before,
+.checkbox-warning input[type="radio"]:checked + .checkbox-icon::before {
+    background-color: @brand-warning;
+    border-color: @brand-warning;
+    color: @input-bg;
+}
+
+.checkbox-success input[type="checkbox"]:checked + .checkbox-icon::before,
+.checkbox-success input[type="radio"]:checked + .checkbox-icon::before {
+    background-color: @brand-success;
+    border-color: @brand-success;
+    color: @input-bg;
+}

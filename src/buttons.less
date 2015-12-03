@@ -1,0 +1,49 @@
+// main: theme.less
+
+/*
+* Buttons
+*/
+
+[btn-checkbox].btn-default:not(.active):focus {
+    outline: none;
+    background-color: inherit;
+}
+
+.btn-light {
+    .button-variant(@btn-default-color; @btn-default-bg; @btn-default-bg);
+}
+
+.btn-light.btn-primary {
+    .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-bg);
+    color: @btn-primary-bg;
+    background-color: @btn-default-bg;
+    border-color: @btn-default-bg;
+}
+
+.btn-light.btn-info {
+    .button-variant(@btn-info-color; @btn-info-bg; @btn-info-bg);
+    color: @btn-info-bg;
+    background-color: @btn-default-bg;
+    border-color: @btn-default-bg;
+}
+
+.btn-light.btn-success {
+    .button-variant(@btn-success-color; @btn-success-bg; @btn-success-bg);
+    color: @btn-success-bg;
+    background-color: @btn-default-bg;
+    border-color: @btn-default-bg;
+}
+
+.btn-light.btn-warning {
+    .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-bg);
+    color: @btn-warning-bg;
+    background-color: @btn-default-bg;
+    border-color: @btn-default-bg;
+}
+
+.btn-light.btn-danger {
+    .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-bg);
+    color: @btn-danger-bg;
+    background-color: @btn-default-bg;
+    border-color: @btn-default-bg;
+}
