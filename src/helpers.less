@@ -1,5 +1,28 @@
 // main: theme.less
 
+.spacing-variant(@csstype; @sizetype; @spacing){
+    .@{csstype}-@{sizetype} { @{csstype}: @spacing; }
+    .@{csstype}-top-@{sizetype} { @{csstype}-top: @spacing; }
+    .@{csstype}-right-@{sizetype} { @{csstype}-right: @spacing; }
+    .@{csstype}-bottom-@{sizetype} { @{csstype}-bottom: @spacing; }
+    .@{csstype}-left-@{sizetype} { @{csstype}-left: @spacing; }
+    .@{csstype}-horizontal-@{sizetype} { @{csstype}-top: @spacing; @{csstype}-bottom: @spacing; }
+    .@{csstype}-vertical-@{sizetype} { @{csstype}-left: @spacing; @{csstype}-right: @spacing; }
+}
+
+.spacing-variant(margin; xs; @spacing-xs);
+.spacing-variant(padding; xs; @spacing-xs);
+
+.spacing-variant(margin; sm; @spacing-sm);
+.spacing-variant(padding; sm; @spacing-sm);
+
+.spacing-variant(margin; md; @spacing-md);
+.spacing-variant(padding; md; @spacing-md);
+
+.spacing-variant(margin; lg; @spacing-lg);
+.spacing-variant(padding; lg; @spacing-lg);
+
+
 .text-base, .text-normal {
     font-size: @font-size-base !important;
 }
