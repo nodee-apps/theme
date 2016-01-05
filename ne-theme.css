@@ -7725,6 +7725,9 @@ input[type="radio"]:checked + .radio-icon::before {
 /*
  * Tables
  */
+.table.table-transparent {
+  background-color: transparent;
+}
 .table-fixed {
   table-layout: fixed;
 }
