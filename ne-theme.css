@@ -6940,6 +6940,12 @@ display-inline {
 .glyphicon-chevron-right:before {
   content: "\f054";
 }
+.glyphicon-chevron-up:before {
+  content: "\f077";
+}
+.glyphicon-chevron-down:before {
+  content: "\f078";
+}
 /*
  * Inputs
  */
