@@ -16,6 +16,28 @@
     position:relative;
 }
 
+.notification-container .alert.expanded {
+    width:auto;
+    position: fixed;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+}
+
+.notification-container .alert.expanded > table {
+    height:100%;
+}
+
+.notification-container .notification-content {
+    overflow:auto;
+    max-height:200px;
+}
+
+.notification-container .alert.expanded .notification-content {
+    max-height:100%;
+}
+
 /*
 * Alert
 */
@@ -34,4 +56,11 @@
     position:absolute;
     top:2px;
     left:2px;
+}
+
+.alert > .alert-expand {
+    position:absolute;
+    top:2px;
+    right:2px;
+    cursor:pointer;
 }
