@@ -7,6 +7,20 @@
 @html-bg:                     #F3F3F4; 
 @body-padding:                10px 0px;
 
+@font-size-base:              14px;
+@font-size-large:             ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:             ceil((@font-size-base * 0.85)); // ~12px
+@font-size-extrasmall:        ceil((@font-size-base * 0.75)); // ~11px
+
+@padding-extrasmall-vertical: 1px;
+@padding-extrasmall-horizontal:5px;
+@line-height-extrasmall:      1.8;
+
+
+//** Small `.form-control` height
+@input-height-extrasmall:     (floor(@font-size-extrasmall * @line-height-extrasmall) + (@padding-extrasmall-vertical * 2) + 2);
+                                    // (9px * 1.5) + (1px * 2) + 2 = 
+
 @menu-vertical-size:          50px;
 @menu-horizontal-size:        40px;
 @menu-bg:                     #333333;

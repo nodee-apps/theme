@@ -34,12 +34,15 @@ input[type="url"].input-xs,
 select.input-xs,
 .form-control.input-xs,
 .form-control.form-control-xs {
-    font-size: 11px;
-    height: 22px;
-    line-height: 1.5em;
-    padding: 1px 5px;
+    font-size: @font-size-extrasmall;
+    height: @input-height-extrasmall;
+    // height: 20px;
+    line-height: @line-height-extrasmall;
+    // padding: 1px 5px;
+    padding: @padding-extrasmall-vertical @padding-extrasmall-horizontal;    
 }
 
+/*
 input[type="text"].input-sm,
 input[type="email"].input-sm,
 input[type="password"].input-sm,
@@ -69,7 +72,7 @@ select.input-lg,
     height: 46px;
     line-height: 1.33em;
     padding: 10px 16px;
-}
+}*/
 
 input.form-control { width:100%; }
 

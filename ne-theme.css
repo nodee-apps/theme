@@ -6915,6 +6915,9 @@ input[type="radio"]:checked + .checkbox-icon::before {
   display: inline-block;
   overflow: hidden;
 }
+.btn .nowrap {
+  line-height: 1;
+}
 td.nowrap {
   display: table-cell;
   max-width: 100px;
@@ -7047,10 +7050,11 @@ select.input-xs,
 .form-control.input-xs,
 .form-control.form-control-xs {
   font-size: 11px;
-  height: 22px;
-  line-height: 1.5em;
+  height: 23px;
+  line-height: 1.8;
   padding: 1px 5px;
 }
+/*
 input[type="text"].input-sm,
 input[type="email"].input-sm,
 input[type="password"].input-sm,
@@ -7061,11 +7065,12 @@ input[type="url"].input-sm,
 select.input-sm,
 .form-control.input-sm,
 .form-control.form-control-sm {
-  font-size: 12px;
-  height: 30px;
-  line-height: 1.5em;
-  padding: 5px 10px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 1.5em;
+    padding: 5px 10px;
 }
+
 input[type="text"].input-lg,
 input[type="email"].input-lg,
 input[type="password"].input-lg,
@@ -7076,10 +7081,10 @@ input[type="url"].input-lg,
 select.input-lg,
 .form-control.input-lg,
 .form-control.form-control-lg {
-  height: 46px;
-  line-height: 1.33em;
-  padding: 10px 16px;
-}
+    height: 46px;
+    line-height: 1.33em;
+    padding: 10px 16px;
+}*/
 input.form-control {
   width: 100%;
 }
@@ -7674,8 +7679,15 @@ border-bottom-right-radius: 4px;
 .alert > .alert-expand {
   position: absolute;
   top: 2px;
+  right: 20px;
+  cursor: pointer;
+}
+.alert > .alert-close {
+  position: absolute;
+  top: 0px;
   right: 2px;
   cursor: pointer;
+  font-size: 16px;
 }
 /*
 * Panels
