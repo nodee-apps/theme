@@ -132,3 +132,88 @@ select {
     padding: 10px 12px;
     pointer-events: none;
 }
+
+
+/*
+ * INPUTS
+ */
+
+.form-control[disabled], fieldset[disabled] .form-control {
+    cursor:text;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="number"], 
+input[type="tel"], 
+input[type="phone"], 
+input[type="url"], 
+select,
+textarea,
+.form-control {
+    background: transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    box-shadow: none;
+}
+
+select::-ms-expand { /* for IE 11 */
+    display: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAMAAACecocUAAAANlBMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMw+rbMAAAAAEXRSTlMAAQMEBwgMEhUqK1iwvL7i/bP7oRYAAABASURBVAgdBcGBAYIwAMCwiG4qA6H/P2sC2/EF2M7uHdjO6t7BUdX9hucYY4wXAIBfVX1gXlULmFctgHktAB7AH7SsAol4VQ2cAAAAAElFTkSuQmCC) no-repeat 100% 50% !important;
+}
+
+/*
+ * Input behaviours
+ */
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus, 
+input[type="number"]:focus, 
+input[type="tel"]:focus, 
+input[type="phone"]:focus, 
+input[type="url"]:focus, 
+select:focus,
+textarea:focus,
+.form-control:focus {
+    outline: none;
+    border-color: transparent;
+    border-bottom-color: #000;
+    box-shadow: none;
+}
+
+input[type="text"].has-error, 
+input[type="email"].has-error, 
+input[type="password"].has-error, 
+input[type="number"].has-error, 
+input[type="tel"].has-error, 
+input[type="phone"].has-error, 
+input[type="url"].has-error, 
+select.has-error,
+textarea.has-error {
+    border-bottom: 1px solid @state-danger-border;
+    background-color: @state-danger-bg;
+    border-top: 1px;
+}
+
+input[type="text"].has-warning, 
+input[type="email"].has-warning, 
+input[type="password"].has-warning, 
+input[type="number"].has-warning, 
+input[type="tel"].has-warning, 
+input[type="phone"].has-warning, 
+input[type="url"].has-warning, 
+select.has-warning,
+textarea.has-warning {
+    border-bottom: 1px solid @state-warning-border;
+    background-color: @state-warning-bg;
+    border-top: 1px;
+}

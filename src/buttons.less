@@ -10,40 +10,94 @@
 }
 
 .btn-light {
-    .button-variant(@btn-default-color; @btn-default-bg; @btn-default-bg);
+    .button-variant-light(@btn-default-color; @btn-default-bg; @btn-default-bg, @btn-default-color);
+}
+
+.btn-light.btn-default {
+    .button-variant-light(@btn-default-color; @btn-default-bg; @btn-default-bg, @btn-default-color);
 }
 
 .btn-light.btn-primary {
-    .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-bg);
-    color: @btn-primary-bg;
-    background-color: @btn-default-bg;
-    border-color: @btn-default-bg;
+    .button-variant-light(@btn-primary-color; @btn-primary-bg; @btn-primary-bg);
 }
 
 .btn-light.btn-info {
-    .button-variant(@btn-info-color; @btn-info-bg; @btn-info-bg);
-    color: @btn-info-bg;
-    background-color: @btn-default-bg;
-    border-color: @btn-default-bg;
+    .button-variant-light(@btn-info-color; @btn-info-bg; @btn-info-bg);
 }
 
 .btn-light.btn-success {
-    .button-variant(@btn-success-color; @btn-success-bg; @btn-success-bg);
-    color: @btn-success-bg;
-    background-color: @btn-default-bg;
-    border-color: @btn-default-bg;
+    .button-variant-light(@btn-success-color; @btn-success-bg; @btn-success-bg);
 }
 
 .btn-light.btn-warning {
-    .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-bg);
-    color: @btn-warning-bg;
-    background-color: @btn-default-bg;
-    border-color: @btn-default-bg;
+    .button-variant-light(@btn-warning-color; @btn-warning-bg; @btn-warning-bg);
 }
 
 .btn-light.btn-danger {
-    .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-bg);
-    color: @btn-danger-bg;
-    background-color: @btn-default-bg;
-    border-color: @btn-default-bg;
+    .button-variant-light(@btn-danger-color; @btn-danger-bg; @btn-danger-bg);
+}
+
+.button-variant-light(@color; @background; @border) {
+    .button-variant(@color; @background; @background);
+
+    color: @border;
+    background-color: transparent;
+    border-color: transparent;
+
+    &[disabled="disabled"], 
+    &[disabled="disabled"]:hover {
+        background-color: transparent;
+        border-color: transparent;
+        color: @btn-default-color;
+    }
+
+    //.input-group-btn > & {
+    //    border-bottom-color: @btn-default-border;
+    //}
+}
+
+/*
+ * Buttons will behave as btn-light, except btn-intensive and [uib-btn-checkbox]
+ */
+
+.btn:not(.btn-intensive):not([uib-btn-checkbox]) {
+    .button-variant-light(@btn-default-color; @btn-default-bg; @btn-default-bg);
+    .button-variant-light-onlyiconcolored(@btn-default-color)
+}
+
+.btn.btn-default:not(.btn-intensive):not([uib-btn-checkbox])  {
+    .button-variant-light(@btn-default-color; @btn-default-bg; @btn-default-bg);
+    .button-variant-light-onlyiconcolored(@btn-default-color)
+}
+
+.btn.btn-primary:not(.btn-intensive) {
+    .button-variant-light(@btn-primary-color; @btn-primary-bg; @btn-primary-bg);
+    .button-variant-light-onlyiconcolored(@btn-primary-bg)
+}
+
+.btn.btn-info:not(.btn-intensive) {
+    .button-variant-light(@btn-info-color; @btn-info-bg; @btn-info-bg);
+    .button-variant-light-onlyiconcolored(@btn-info-bg)
+}
+
+.btn.btn-success:not(.btn-intensive) {
+    .button-variant-light(@btn-success-color; @btn-success-bg; @btn-success-bg);
+    .button-variant-light-onlyiconcolored(@btn-success-bg)
+}
+
+.btn.btn-warning:not(.btn-intensive) {
+    .button-variant-light(@btn-warning-color; @btn-warning-bg; @btn-warning-bg);
+    .button-variant-light-onlyiconcolored(@btn-warning-bg)
+}
+
+.btn.btn-danger:not(.btn-intensive) {
+    .button-variant-light(@btn-danger-color; @btn-danger-bg; @btn-danger-bg);
+    .button-variant-light-onlyiconcolored(@btn-danger-bg)
+}
+
+.button-variant-light-onlyiconcolored(@icon-color){
+    color: @btn-default-color;
+    &:not(:hover):not(:active):not(:focus) .fa {
+        color: @icon-color;
+    }
 }

@@ -1,0 +1,28 @@
+// main: theme.less
+
+/*
+ * Custom theme behaviours different from bootstrap
+ */
+
+.input-group-addon { 
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+} 
+
+/*
+ * All angular clickable elements has cursor pointer
+ */
+
+[ng-click]:not(input) {
+    cursor:pointer;
+}
+
+// fixed line-height on select
+select.input-sm,
+select.input-lg {
+  line-height: 1.5;
+}
+
+// allow textarea to resize only vertical
+textarea { resize: vertical; }
