@@ -7960,7 +7960,7 @@ textarea.has-warning {
 }
 #page-content-wrapper {
   width: 100%;
-  padding: 5px 0px;
+  padding: 5px 5px;
   background-color: #F3F3F4;
 }
 #wrapper.toggled #page-content-wrapper {
@@ -7989,7 +7989,7 @@ textarea.has-warning {
     position: absolute;
   }
   #page-content-wrapper {
-    padding: 5px 0px;
+    padding: 5px 5px;
   }
   #wrapper.toggled #page-content-wrapper {
     position: relative;
